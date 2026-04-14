@@ -42,7 +42,7 @@ function App() {
 
       <main>
         {/* Hero Section */}
-        <section className="hero">
+        <section className="hero" style={{ background: `linear-gradient(to right, rgba(26,30,35,0.95) 0%, rgba(26,30,35,0.7) 100%), url(${import.meta.env.BASE_URL}images/industry-cladding-1.jpeg) no-repeat center center/cover` }}>
           <div className="container hero-container">
             <div className="hero-content">
               <h1>Custom Mezzanine Offices for Melbourne Businesses</h1>
@@ -52,8 +52,8 @@ function App() {
                 <a href="https://dynamicws.com.au/build-your-own-mezzanine/" className="btn btn-secondary">Build Your Estimate Online</a>
               </div>
             </div>
-            <div className="hero-image-card">
-              <div className="glass-panel">
+            <div className="hero-features">
+              <div className="glass-panel" style={{ position: 'relative', bottom: 'auto', left: 'auto', width: '100%' }}>
                 <h3>Why Build Upwards?</h3>
                 <ul>
                   <li><strong>✓</strong> Zero Relocation Costs</li>
@@ -94,12 +94,10 @@ function App() {
           <div className="container">
             <div className="insights-grid">
               <div className="insight-card">
-                <div className="insight-icon">🏢</div>
                 <h3>The 'Boutique Industrial' Trend</h3>
                 <p>The days of clinical demountable boxes are over. We integrate raw structural power with refined finishes, using exposed steel, glass partitions, and premium textures to create an unforgettable workspace.</p>
               </div>
               <div className="insight-card">
-                <div class="insight-icon">🔇</div>
                 <h3>Superior Soundproofing</h3>
                 <p>Acoustic separation is critical. Using commercial-grade glass, ceiling baffles, and dense cavity systems, we block out forklift noise so your team can focus and conduct meetings in peace.</p>
               </div>
@@ -124,6 +122,7 @@ function App() {
                 <div className="project-brief">
                   <h3>Industry Cladding & Roofing</h3>
                   <p>A full-scale structural expansion requiring an office space that matched the company's architectural profile. We delivered a multi-tiered mezzanine finished in deep charcoals and warm textures, balancing operational demands with high-end corporate presentation.</p>
+                  <a href="#" className="btn btn-secondary" style={{ marginTop: '20px', borderColor: '#b1d236', color: '#23282f' }}>View Project</a>
                 </div>
               </div>
 
@@ -135,6 +134,7 @@ function App() {
                 <div className="project-brief">
                   <h3>Paramount Liquor</h3>
                   <p>Paramount required a sophisticated, sound-isolated operational hub suspended above their high-turnover liquor staging facility. The result was a sleek, glass-fronted mezzanine offering clear sightlines alongside quiet meeting zones.</p>
+                  <a href="#" className="btn btn-secondary" style={{ marginTop: '20px', borderColor: '#b1d236', color: '#23282f' }}>View Project</a>
                 </div>
               </div>
 
@@ -146,6 +146,7 @@ function App() {
                 <div className="project-brief">
                   <h3>Hastings Mezzanine Fitout</h3>
                   <p>A fast-growing distribution hub needed dedicated administrative zones without sacrificing ground-floor picking space. We designed an independent mezzanine level equipped with climate-controlled offices directly overlooking the warehouse.</p>
+                  <a href="#" className="btn btn-secondary" style={{ marginTop: '20px', borderColor: '#b1d236', color: '#23282f' }}>View Project</a>
                 </div>
               </div>
             </div>
