@@ -42,7 +42,7 @@ function App() {
 
       <main>
         {/* Hero Section */}
-        <section className="hero" style={{ background: `linear-gradient(to right, rgba(26,30,35,0.95) 0%, rgba(26,30,35,0.7) 100%), url(${import.meta.env.BASE_URL}images/industry-cladding-1.jpeg) no-repeat center center/cover` }}>
+        <section className="hero" style={{ background: `linear-gradient(to right, rgba(26,30,35,0.95) 0%, rgba(26,30,35,0.7) 100%), url(${import.meta.env.BASE_URL}images/hastings-hero.jpeg) no-repeat center center/cover` }}>
           <div className="container hero-container">
             <div className="hero-content">
               <h1>Custom Mezzanine Offices for Melbourne Businesses</h1>
@@ -151,17 +151,6 @@ function App() {
               </div>
             </div>
 
-            {/* Banner Badge - Moved from top */}
-            <div className="badge-banner-projects text-center" style={{ marginTop: '3rem', padding: '2rem', backgroundColor: '#f9fafb', borderRadius: '8px' }}>
-              <img 
-                src="https://dynamicws.com.au/wp-content/uploads/2021/02/registered-builder-grey.png" 
-                alt="Registered Commercial Building Practitioner" 
-                style={{ maxWidth: '200px', marginBottom: '1rem' }}
-              />
-              <p style={{ maxWidth: '800px', margin: '0 auto', color: '#555' }}>
-                Looking for a fully compliant workspace? Dynamic Warehouse Solutions is a certified Commercial Building Practitioner. Every custom mezzanine office we deliver guarantees strict adherence to Australian safety regulations, building codes, and structural integrity standards.
-              </p>
-            </div>
           </div>
         </section>
 
@@ -195,6 +184,18 @@ function App() {
                 <button type="submit" className="btn btn-primary submit-btn">Request Callback</button>
                 <p className="form-footer">Need a fast quote right now? <br/><a href="https://dynamicws.com.au/build-your-own-mezzanine/">Build your estimate online ➝</a></p>
               </form>
+            </div>
+          </div>
+          <div className="container" style={{ marginTop: '4rem' }}>
+            <div className="badge-banner-projects text-center" style={{ padding: '2rem', backgroundColor: 'rgba(255,255,255,0.02)', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.08)' }}>
+              <img 
+                src="https://dynamicws.com.au/wp-content/uploads/2021/02/registered-builder-grey.png" 
+                alt="Registered Commercial Building Practitioner" 
+                style={{ maxWidth: '200px', display: 'block', margin: '0 auto 1.5rem auto' }}
+              />
+              <p style={{ maxWidth: '800px', margin: '0 auto', color: 'var(--text-muted)' }}>
+                Dynamic Warehouse Solutions is a certified Commercial Building Practitioner. Every custom mezzanine office we deliver guarantees strict adherence to Australian safety regulations, building codes, and structural integrity standards.
+              </p>
             </div>
           </div>
         </section>
