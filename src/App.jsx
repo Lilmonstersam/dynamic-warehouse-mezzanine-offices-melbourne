@@ -94,10 +94,12 @@ function App() {
           <div className="container">
             <div className="insights-grid">
               <div className="insight-card">
+                <img src={`${import.meta.env.BASE_URL}images/boutique-industrial.jpeg`} alt="Boutique Industrial Trend" style={{ width: '100%', height: '240px', objectFit: 'cover', borderRadius: '8px', marginBottom: '20px' }} />
                 <h3>The 'Boutique Industrial' Trend</h3>
                 <p>The days of clinical demountable boxes are over. We integrate raw structural power with refined finishes, using exposed steel, glass partitions, and premium textures to create an unforgettable workspace.</p>
               </div>
               <div className="insight-card">
+                <img src={`${import.meta.env.BASE_URL}images/soundproofing.jpeg`} alt="Superior Soundproofing" style={{ width: '100%', height: '240px', objectFit: 'cover', borderRadius: '8px', marginBottom: '20px' }} />
                 <h3>Superior Soundproofing</h3>
                 <p>Acoustic separation is critical. Using commercial-grade glass, ceiling baffles, and dense cavity systems, we block out forklift noise so your team can focus and conduct meetings in peace.</p>
               </div>
@@ -113,7 +115,7 @@ function App() {
               <p>Explore our recent custom fitouts across Victoria's leading distribution and manufacturing hubs.</p>
             </div>
 
-            <div className="project-showcase">
+            <div className="project-showcase carousel-desktop">
               <div className="project-item">
                 <div className="project-images">
                   <img src={`${import.meta.env.BASE_URL}images/industry-cladding-1.jpeg`} alt="Industry Cladding Corporate Mezzanine Space" className="main-img" />
@@ -160,6 +162,17 @@ function App() {
             <div className="lead-content">
               <h2>Ready to Expand Your Workspace?</h2>
               <p>Discuss your operational bottlenecks with our structural experts. We provide comprehensive site appraisals and tailored boutique industrial designs.</p>
+
+              <div className="badge-banner-projects" style={{ marginTop: '3rem', padding: '1.5rem', backgroundColor: 'rgba(255,255,255,0.02)', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.08)' }}>
+                <img 
+                  src="https://dynamicws.com.au/wp-content/uploads/2021/02/registered-builder-grey.png" 
+                  alt="Registered Commercial Building Practitioner" 
+                  style={{ maxWidth: '180px', display: 'block', marginBottom: '1rem' }}
+                />
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', margin: 0 }}>
+                  Dynamic Warehouse Solutions is a certified Commercial Building Practitioner. Every custom mezzanine office we deliver guarantees strict adherence to Australian safety regulations, building codes, and structural integrity standards.
+                </p>
+              </div>
             </div>
             <div className="form-wrapper">
               <form className="cro-form" onSubmit={(e) => { e.preventDefault(); alert('Lead captured in mockup.'); }}>
@@ -184,18 +197,6 @@ function App() {
                 <button type="submit" className="btn btn-primary submit-btn">Request Callback</button>
                 <p className="form-footer">Need a fast quote right now? <br/><a href="https://dynamicws.com.au/build-your-own-mezzanine/">Build your estimate online ➝</a></p>
               </form>
-            </div>
-          </div>
-          <div className="container" style={{ marginTop: '4rem' }}>
-            <div className="badge-banner-projects text-center" style={{ padding: '2rem', backgroundColor: 'rgba(255,255,255,0.02)', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.08)' }}>
-              <img 
-                src="https://dynamicws.com.au/wp-content/uploads/2021/02/registered-builder-grey.png" 
-                alt="Registered Commercial Building Practitioner" 
-                style={{ maxWidth: '200px', display: 'block', margin: '0 auto 1.5rem auto' }}
-              />
-              <p style={{ maxWidth: '800px', margin: '0 auto', color: 'var(--text-muted)' }}>
-                Dynamic Warehouse Solutions is a certified Commercial Building Practitioner. Every custom mezzanine office we deliver guarantees strict adherence to Australian safety regulations, building codes, and structural integrity standards.
-              </p>
             </div>
           </div>
         </section>

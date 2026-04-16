@@ -311,19 +311,6 @@ img {
     line-height: 1.8;
 }
 
-.insight-icon {
-    font-size: 40px;
-    margin-bottom: 20px;
-}
-
-.insight-card h3 {
-    font-size: 24px;
-}
-
-.insight-card p {
-    color: #666;
-}
-
 /* PROJECT SHOWCASE */
 .projects {
     padding: 100px 0;
@@ -351,6 +338,40 @@ img {
     gap: 60px;
     align-items: center;
     margin-bottom: 100px;
+}
+
+@media (min-width: 768px) {
+    .project-showcase.carousel-desktop {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 40px;
+        -webkit-overflow-scrolling: touch;
+        gap: 40px;
+        scrollbar-width: thin;
+        scrollbar-color: var(--primary-green) #e0e0e0;
+    }
+    
+    .project-showcase.carousel-desktop::-webkit-scrollbar {
+        height: 8px;
+    }
+    
+    .project-showcase.carousel-desktop::-webkit-scrollbar-track {
+        background: #e0e0e0;
+        border-radius: 4px;
+    }
+    
+    .project-showcase.carousel-desktop::-webkit-scrollbar-thumb {
+        background: var(--primary-green);
+        border-radius: 4px;
+    }
+
+    .project-showcase.carousel-desktop .project-item {
+        flex: 0 0 calc(100% - 20px);
+        scroll-snap-align: center;
+        margin-bottom: 0;
+    }
 }
 
 .project-item.reverse {
