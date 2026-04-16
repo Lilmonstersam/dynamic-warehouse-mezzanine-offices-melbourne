@@ -368,7 +368,7 @@ img {
     }
 
     .project-showcase.carousel-desktop .project-item {
-        flex: 0 0 calc(100% - 20px);
+        flex: 0 0 85%;
         scroll-snap-align: center;
         margin-bottom: 0;
     }
