@@ -9,7 +9,7 @@
 
 # Custom Mezzanine Offices for Melbourne Businesses
 
-Warehouse space in Melbourne is at a premium—but what if you could double your operational footprint without relocating? 
+Warehouse space in Melbourne is at a premium: but what if you could double your operational footprint without relocating? 
 
 A custom mezzanine office fitout turns wasted vertical space into a productive, boutique workspace. From heavy-duty steel structures to refined, soundproofed boardrooms, expanding upwards is the smartest property decision a growing business can make.
 
