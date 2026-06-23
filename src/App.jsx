@@ -61,6 +61,10 @@ function App() {
                   <li><strong>✓</strong> Boutique Industrial Finishes</li>
                 </ul>
               </div>
+              <div className="glass-panel" style={{ position: 'relative', bottom: 'auto', left: 'auto', width: '100%' }}>
+                <h3>25-Year Warranty</h3>
+                <p>Our mezzanine structures are engineered to last, backed by an industry-leading 25-year structural warranty.</p>
+              </div>
             </div>
           </div>
         </section>
