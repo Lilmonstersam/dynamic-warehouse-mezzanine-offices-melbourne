@@ -1,6 +1,6 @@
 :root {
-    --primary-green: #b1d236;
-    --primary-green-hover: #9dbb2c;
+    --primary-green: #169499;
+    --primary-green-hover: #127a7e;
     --dark-charcoal: #23282f;
     --dark-bg: #1a1e23;
     --light-bg: #f9fbfa;
@@ -80,13 +80,13 @@ img {
 .btn-primary {
     background-color: var(--primary-green);
     color: var(--dark-charcoal);
-    box-shadow: 0 4px 15px rgba(177, 210, 54, 0.3);
+    box-shadow: 0 4px 15px rgba(22, 148, 153, 0.3);
 }
 
 .btn-primary:hover {
     background-color: var(--primary-green-hover);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(177, 210, 54, 0.4);
+    box-shadow: 0 6px 20px rgba(22, 148, 153, 0.4);
 }
 
 .btn-secondary {
@@ -150,7 +150,7 @@ img {
     right: -20%;
     width: 80%;
     height: 200%;
-    background: radial-gradient(circle, rgba(177, 210, 54, 0.05) 0%, transparent 60%);
+    background: radial-gradient(circle, rgba(22, 148, 153, 0.05) 0%, transparent 60%);
     transform: rotate(-15deg);
     pointer-events: none;
 }
@@ -206,7 +206,7 @@ img {
     -webkit-backdrop-filter: blur(10px);
     padding: 30px;
     border-radius: 8px;
-    border: 1px solid rgba(177, 210, 54, 0.2);
+    border: 1px solid rgba(22, 148, 153, 0.2);
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
@@ -295,7 +295,7 @@ img {
 
 .insight-card:hover {
     transform: translateY(-8px);
-    border-color: rgba(177, 210, 54, 0.4);
+    border-color: rgba(22, 148, 153, 0.4);
 }
 
 .insight-card h3 {

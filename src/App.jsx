@@ -128,7 +128,7 @@ function App() {
                 <div className="project-brief">
                   <h3>Industry Cladding & Roofing</h3>
                   <p>A full-scale structural expansion requiring an office space that matched the company's architectural profile. We delivered a multi-tiered mezzanine finished in deep charcoals and warm textures, balancing operational demands with high-end corporate presentation.</p>
-                  <a href="#" className="btn btn-secondary" style={{ marginTop: '20px', borderColor: '#b1d236', color: '#23282f' }}>View Project</a>
+                  <a href="#" className="btn btn-secondary" style={{ marginTop: '20px', borderColor: '#169499', color: '#23282f' }}>View Project</a>
                 </div>
               </div>
 
@@ -140,7 +140,7 @@ function App() {
                 <div className="project-brief">
                   <h3>Paramount Liquor</h3>
                   <p>Paramount required a sophisticated, sound-isolated operational hub suspended above their high-turnover liquor staging facility. The result was a sleek, glass-fronted mezzanine offering clear sightlines alongside quiet meeting zones.</p>
-                  <a href="#" className="btn btn-secondary" style={{ marginTop: '20px', borderColor: '#b1d236', color: '#23282f' }}>View Project</a>
+                  <a href="#" className="btn btn-secondary" style={{ marginTop: '20px', borderColor: '#169499', color: '#23282f' }}>View Project</a>
                 </div>
               </div>
 
@@ -152,7 +152,7 @@ function App() {
                 <div className="project-brief">
                   <h3>Hastings Mezzanine Fitout</h3>
                   <p>A fast-growing distribution hub needed dedicated administrative zones without sacrificing ground-floor picking space. We designed an independent mezzanine level equipped with climate-controlled offices directly overlooking the warehouse.</p>
-                  <a href="#" className="btn btn-secondary" style={{ marginTop: '20px', borderColor: '#b1d236', color: '#23282f' }}>View Project</a>
+                  <a href="#" className="btn btn-secondary" style={{ marginTop: '20px', borderColor: '#169499', color: '#23282f' }}>View Project</a>
                 </div>
               </div>
             </div>
