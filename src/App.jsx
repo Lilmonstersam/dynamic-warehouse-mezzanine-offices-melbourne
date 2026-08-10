@@ -1,26 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 function App() {
   const [showSticky, setShowSticky] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
       if (typeof window !== 'undefined') {
         const currentScrollY = window.scrollY;
         // Show sticky CTA if scrolling up, hide if scrolling down or at the very top.
-        if (currentScrollY < lastScrollY && currentScrollY > 200) {
+        if (currentScrollY < lastScrollY.current && currentScrollY > 200) {
           setShowSticky(true);
         } else {
           setShowSticky(false);
         }
-        setLastScrollY(currentScrollY);
+        lastScrollY.current = currentScrollY;
       }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
   const scrollToQuote = (e) => {
     e.preventDefault();
@@ -46,24 +46,14 @@ function App() {
           <div className="container hero-container">
             <div className="hero-content">
               <h1>Custom Mezzanine Offices for Melbourne Businesses</h1>
-              <p>Turn wasted vertical space into a productive, boutique industrial workspace. Expertly designed, engineered, and soundproofed for modern Australian distribution hubs.</p>
+              <div className="hero-rule" aria-hidden="true"></div>
+              <div className="hero-copy">
+                <p>Turn wasted vertical space into a productive, boutique industrial workspace. Expertly designed, engineered, and soundproofed for modern Australian distribution hubs.</p>
+                <p>Building upwards eliminates relocation costs, keeps your office connected to warehouse operations, and creates a polished boutique industrial environment without sacrificing valuable floor space.</p>
+              </div>
               <div className="hero-cta-group">
                 <a href="#quote" className="btn btn-primary" onClick={scrollToQuote}>Request a Custom Proposal</a>
                 <a href="https://dynamicws.com.au/build-your-own-mezzanine/" className="btn btn-secondary">Build Your Estimate Online</a>
-              </div>
-            </div>
-            <div className="hero-features">
-              <div className="glass-panel" style={{ position: 'relative', bottom: 'auto', left: 'auto', width: '100%' }}>
-                <h3>Why Build Upwards?</h3>
-                <ul>
-                  <li><strong>✓</strong> Zero Relocation Costs</li>
-                  <li><strong>✓</strong> Integrated Warehouse Oversight</li>
-                  <li><strong>✓</strong> Boutique Industrial Finishes</li>
-                </ul>
-              </div>
-              <div className="glass-panel" style={{ position: 'relative', bottom: 'auto', left: 'auto', width: '100%' }}>
-                <h3>25-Year Warranty</h3>
-                <p>Our mezzanine structures are engineered to last, backed by an industry-leading 25-year structural warranty.</p>
               </div>
             </div>
           </div>
@@ -212,9 +202,18 @@ function App() {
         </div>
       </footer>
 
-      {/* Sticky Mobile CTA */}
-      <div className={`sticky-cta ${showSticky ? 'visible' : ''}`}>
-        <a href="#quote" onClick={scrollToQuote}>Request a custom proposal</a>
+      {/* Sticky CTA */}
+      <div className={`sticky-cta ${showSticky ? 'visible' : ''}`} aria-hidden={!showSticky}>
+        <div className="sticky-cta-inner">
+          <p className="sticky-warranty">
+            <strong>25-year structural warranty</strong>
+            <span>Engineered to last and backed by our industry-leading warranty.</span>
+          </p>
+          <div className="sticky-cta-actions">
+            <a href="#quote" className="sticky-cta-primary" tabIndex={showSticky ? 0 : -1} onClick={scrollToQuote}>Request a Custom Proposal</a>
+            <a href="https://dynamicws.com.au/build-your-own-mezzanine/" className="sticky-cta-secondary" tabIndex={showSticky ? 0 : -1}>Build Your Estimate Online</a>
+          </div>
+        </div>
       </div>
     </>
   );

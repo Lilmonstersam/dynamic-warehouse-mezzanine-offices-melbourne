@@ -163,73 +163,34 @@ img {
 .hero p {
     color: var(--text-muted);
     font-size: 18px;
-    max-width: 600px;
-    margin-bottom: 40px;
+    max-width: 760px;
 }
 
 .hero-container {
+    display: block;
+}
+
+.hero-content {
+    max-width: 860px;
+}
+
+.hero-rule {
+    width: 180px;
+    height: 2px;
+    margin: 28px 0;
+    background: linear-gradient(90deg, #a9ae74 0%, var(--primary-green) 100%);
+}
+
+.hero-copy {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
+    gap: 14px;
+    margin-bottom: 40px;
 }
 
 .hero-cta-group {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-}
-
-.hero-image-card {
-    position: relative;
-    height: 100%;
-    min-height: 400px;
-    background: url('file:///Applications/Antigravity/Digilari%20Accounts/Dynamic%20Warehouse%20Solutions/Content%20SEO/Images/project-images/Industry%20Cladding%20and%20Roofing%20-%20Dynamic%20Warehouse%20Solutions/imgi_19_Img-01-scaled.jpeg') no-repeat center center/cover;
-    border-radius: 8px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-}
-
-.hero-image-card::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 8px;
-}
-
-.glass-panel {
-    position: absolute;
-    bottom: -30px;
-    left: -30px;
-    background: rgba(35, 40, 47, 0.85);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: 30px;
-    border-radius: 8px;
-    border: 1px solid rgba(22, 148, 153, 0.2);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
-
-.glass-panel h3 {
-    color: var(--primary-green);
-    font-size: 18px;
-}
-
-.glass-panel ul {
-    list-style: none;
-    margin-top: 15px;
-}
-
-.glass-panel li {
-    margin-bottom: 10px;
-    color: var(--white);
-    font-size: 15px;
-    display: flex;
-    gap: 10px;
-}
-
-.glass-panel li strong {
-    color: var(--primary-green);
 }
 
 /* ONE STOP SOLUTIONS */
@@ -522,28 +483,85 @@ img {
 /* STICKY CTA */
 .sticky-cta {
     position: fixed;
-    bottom: -100px;
+    bottom: 0;
     left: 0;
     width: 100%;
-    background: var(--primary-green);
-    text-align: center;
-    padding: 15px;
+    background: rgba(26, 30, 35, 0.98);
+    border-top: 2px solid var(--primary-green);
+    padding: 14px 0;
     z-index: 1000;
-    transition: bottom 0.3s ease-in-out;
-    box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+    transform: translateY(110%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 -8px 28px rgba(0,0,0,0.24);
 }
 
 .sticky-cta.visible {
-    bottom: 0;
+    transform: translateY(0);
 }
 
-.sticky-cta a {
-    color: var(--dark-charcoal);
-    width: 100%;
+.sticky-cta-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+.sticky-warranty {
+    color: rgba(255,255,255,0.72);
+    font-size: 13px;
+    line-height: 1.45;
+    margin: 0;
+}
+
+.sticky-warranty strong {
     display: block;
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.sticky-cta-actions {
+    display: flex;
+    flex-shrink: 0;
+    gap: 10px;
+}
+
+.sticky-cta-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 11px 18px;
+    color: var(--white);
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
+    font-size: 11px;
+    line-height: 1.25;
+    text-align: center;
+}
+
+.sticky-cta-primary {
+    background: var(--primary-green);
+}
+
+.sticky-cta-primary:hover {
+    background: var(--primary-green-hover);
+    color: var(--white);
+}
+
+.sticky-cta-secondary {
+    border: 1px solid rgba(255,255,255,0.55);
+}
+
+.sticky-cta-secondary:hover {
+    background: var(--white);
+    border-color: var(--white);
+    color: var(--dark-charcoal);
 }
 
 /* FOOTER */
@@ -556,15 +574,8 @@ footer {
 
 /* RESPONSIVE */
 @media (max-width: 991px) {
-    .hero-container, 
     .lead-container {
         grid-template-columns: 1fr;
-    }
-    
-    .glass-panel {
-        bottom: -20px;
-        left: 20px;
-        right: 20px;
     }
     
     .project-item,
@@ -589,13 +600,35 @@ footer {
         left: -10px;
     }
     
-    body {
-        padding-bottom: 50px; /* Padding for mobile sticky CTA */
-    }
-}
-
-@media (min-width: 769px) {
     .sticky-cta {
-        display: none !important;
+        padding: 11px 0 max(11px, env(safe-area-inset-bottom));
+    }
+
+    .sticky-cta-inner {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sticky-warranty {
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .sticky-warranty strong {
+        display: inline;
+        margin-right: 5px;
+        font-size: 13px;
+    }
+
+    .sticky-cta-actions {
+        width: 100%;
+    }
+
+    .sticky-cta-actions a {
+        flex: 1 1 50%;
+        padding: 10px 8px;
+        font-size: 9.5px;
+        letter-spacing: 0.8px;
     }
 }
