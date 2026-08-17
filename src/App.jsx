@@ -42,7 +42,7 @@ function App() {
 
       <main>
         {/* Hero Section */}
-        <section className="hero" style={{ background: `linear-gradient(to right, rgba(26,30,35,0.95) 0%, rgba(26,30,35,0.7) 100%), url(${import.meta.env.BASE_URL}images/hastings-hero.jpeg) no-repeat center center/cover` }}>
+        <section className="hero" style={{ background: `linear-gradient(to right, rgba(17,17,16,0.96) 0%, rgba(17,17,16,0.72) 100%), url(${import.meta.env.BASE_URL}images/hastings-hero.jpeg) no-repeat center center/cover` }}>
           <div className="container hero-container">
             <div className="hero-content">
               <h1>Custom Mezzanine Offices for Melbourne Businesses</h1>
@@ -118,7 +118,7 @@ function App() {
                 <div className="project-brief">
                   <h3>Industry Cladding & Roofing</h3>
                   <p>A full-scale structural expansion requiring an office space that matched the company's architectural profile. We delivered a multi-tiered mezzanine finished in deep charcoals and warm textures, balancing operational demands with high-end corporate presentation.</p>
-                  <a href="#" className="btn btn-secondary" style={{ marginTop: '20px', borderColor: '#169499', color: '#23282f' }}>View Project</a>
+                  <a href="#" className="btn btn-secondary project-link" style={{ marginTop: '20px' }}>View Project</a>
                 </div>
               </div>
 
@@ -130,7 +130,7 @@ function App() {
                 <div className="project-brief">
                   <h3>Paramount Liquor</h3>
                   <p>Paramount required a sophisticated, sound-isolated operational hub suspended above their high-turnover liquor staging facility. The result was a sleek, glass-fronted mezzanine offering clear sightlines alongside quiet meeting zones.</p>
-                  <a href="#" className="btn btn-secondary" style={{ marginTop: '20px', borderColor: '#169499', color: '#23282f' }}>View Project</a>
+                  <a href="#" className="btn btn-secondary project-link" style={{ marginTop: '20px' }}>View Project</a>
                 </div>
               </div>
 
@@ -142,7 +142,7 @@ function App() {
                 <div className="project-brief">
                   <h3>Hastings Mezzanine Fitout</h3>
                   <p>A fast-growing distribution hub needed dedicated administrative zones without sacrificing ground-floor picking space. We designed an independent mezzanine level equipped with climate-controlled offices directly overlooking the warehouse.</p>
-                  <a href="#" className="btn btn-secondary" style={{ marginTop: '20px', borderColor: '#169499', color: '#23282f' }}>View Project</a>
+                  <a href="#" className="btn btn-secondary project-link" style={{ marginTop: '20px' }}>View Project</a>
                 </div>
               </div>
             </div>
