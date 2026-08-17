@@ -41,8 +41,7 @@ function App() {
       </header>
 
       <main>
-        {/* Hero Section */}
-        <section className="hero" style={{ background: `linear-gradient(to right, rgba(17,17,16,0.96) 0%, rgba(17,17,16,0.72) 100%), url(${import.meta.env.BASE_URL}images/hastings-hero.jpeg) no-repeat center center/cover` }}>
+        <section className="hero" style={{ backgroundImage: `linear-gradient(to right, rgba(34,38,47,0.95) 0%, rgba(34,38,47,0.62) 100%), url(${import.meta.env.BASE_URL}images/hastings-hero.jpeg)` }}>
           <div className="container hero-container">
             <div className="hero-content">
               <h1>Custom Mezzanine Offices for Melbourne Businesses</h1>
@@ -59,23 +58,26 @@ function App() {
           </div>
         </section>
 
-        {/* One-Stop Solutions Section */}
         <section className="one-stop">
           <div className="container">
             <div className="section-heading text-center">
               <h2>One-Stop Warehouse Mezzanine Solutions</h2>
               <p>Our professional team provides custom mezzanine design, supply, and installation services for warehouses across Melbourne.</p>
             </div>
+            <div className="section-rule" aria-hidden="true"></div>
             <div className="one-stop-grid">
               <div className="solution-card">
+                <div className="card-kicker" aria-hidden="true"></div>
                 <h3>Design</h3>
                 <p>Dynamic offers a 'Free Layout & Design Service', and our Design Team will present a recommended warehouse fit out solution based on your needs.</p>
               </div>
               <div className="solution-card">
+                <div className="card-kicker" aria-hidden="true"></div>
                 <h3>Supply</h3>
                 <p>All products are manufactured and tested to our exacting control processors. All products are backed up by a minimum 5 year Warranty.</p>
               </div>
               <div className="solution-card">
+                <div className="card-kicker" aria-hidden="true"></div>
                 <h3>Install</h3>
                 <p>Dynamic has the experience and processes to ensure your project runs smoothly and on time. Here at Dynamic we use only the best – qualified mezzanine installers for our projects.</p>
               </div>
@@ -83,54 +85,60 @@ function App() {
           </div>
         </section>
 
-        {/* Insights / Trends Section */}
         <section className="insights">
           <div className="container">
             <div className="insights-grid">
               <div className="insight-card">
-                <img src={`${import.meta.env.BASE_URL}images/boutique-industrial.jpeg`} alt="Boutique Industrial Trend" style={{ width: '100%', height: '240px', objectFit: 'cover', borderRadius: '8px', marginBottom: '20px' }} />
-                <h3>The 'Boutique Industrial' Trend</h3>
-                <p>The days of clinical demountable boxes are over. We integrate raw structural power with refined finishes, using exposed steel, glass partitions, and premium textures to create an unforgettable workspace.</p>
+                <img src={`${import.meta.env.BASE_URL}images/boutique-industrial.jpeg`} alt="Boutique Industrial Trend" />
+                <div className="insight-content">
+                  <h3>The 'Boutique Industrial' Trend</h3>
+                  <div className="accent-rule" aria-hidden="true"></div>
+                  <p>The days of clinical demountable boxes are over. We integrate raw structural power with refined finishes, using exposed steel, glass partitions, and premium textures to create an unforgettable workspace.</p>
+                </div>
               </div>
               <div className="insight-card">
-                <img src={`${import.meta.env.BASE_URL}images/soundproofing.jpeg`} alt="Superior Soundproofing" style={{ width: '100%', height: '240px', objectFit: 'cover', borderRadius: '8px', marginBottom: '20px' }} />
-                <h3>Superior Soundproofing</h3>
-                <p>Acoustic separation is critical. Using commercial-grade glass, ceiling baffles, and dense cavity systems, we block out forklift noise so your team can focus and conduct meetings in peace.</p>
+                <img src={`${import.meta.env.BASE_URL}images/soundproofing.jpeg`} alt="Superior Soundproofing" />
+                <div className="insight-content">
+                  <h3>Superior Soundproofing</h3>
+                  <div className="accent-rule" aria-hidden="true"></div>
+                  <p>Acoustic separation is critical. Using commercial-grade glass, ceiling baffles, and dense cavity systems, we block out forklift noise so your team can focus and conduct meetings in peace.</p>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Design Gallery & Project Briefs */}
         <section className="projects">
           <div className="container">
             <div className="section-heading text-center">
               <h2>Melbourne Mezzanine Projects</h2>
               <p>Explore our recent custom fitouts across Victoria's leading distribution and manufacturing hubs.</p>
             </div>
+            <div className="section-rule projects-rule" aria-hidden="true"></div>
 
             <div className="project-showcase carousel-desktop">
               <div className="project-item">
                 <div className="project-images">
                   <img src={`${import.meta.env.BASE_URL}images/industry-cladding-1.jpeg`} alt="Industry Cladding Corporate Mezzanine Space" className="main-img" />
-                  <img src={`${import.meta.env.BASE_URL}images/industry-cladding-2.jpeg`} alt="Industry Cladding Ground View" className="sub-img" />
                 </div>
                 <div className="project-brief">
                   <h3>Industry Cladding & Roofing</h3>
+                  <div className="accent-rule" aria-hidden="true"></div>
                   <p>A full-scale structural expansion requiring an office space that matched the company's architectural profile. We delivered a multi-tiered mezzanine finished in deep charcoals and warm textures, balancing operational demands with high-end corporate presentation.</p>
-                  <a href="#" className="btn btn-secondary project-link" style={{ marginTop: '20px' }}>View Project</a>
+                  <a href="#" className="btn btn-secondary project-link">View Project</a>
                 </div>
               </div>
 
-              <div className="project-item reverse">
-                <div className="project-images">
-                  <img src={`${import.meta.env.BASE_URL}images/paramount-1.jpeg`} alt="Paramount Liquor Glass Front Mezzanine" className="main-img" />
-                  <img src={`${import.meta.env.BASE_URL}images/paramount-2.jpeg`} alt="Paramount Liquor Interior Hub" className="sub-img" />
-                </div>
+              <div className="project-item project-item-reverse">
                 <div className="project-brief">
                   <h3>Paramount Liquor</h3>
+                  <div className="accent-rule" aria-hidden="true"></div>
                   <p>Paramount required a sophisticated, sound-isolated operational hub suspended above their high-turnover liquor staging facility. The result was a sleek, glass-fronted mezzanine offering clear sightlines alongside quiet meeting zones.</p>
-                  <a href="#" className="btn btn-secondary project-link" style={{ marginTop: '20px' }}>View Project</a>
+                  <a href="#" className="btn btn-secondary project-link">View Project</a>
+                </div>
+                <div className="project-images project-images-left">
+                  <img src={`${import.meta.env.BASE_URL}images/paramount-1.jpeg`} alt="Paramount Liquor Glass Front Mezzanine" className="main-img" />
+                  <img src={`${import.meta.env.BASE_URL}images/paramount-2.jpeg`} alt="Paramount Liquor Interior Hub" className="sub-img" />
                 </div>
               </div>
 
@@ -141,8 +149,9 @@ function App() {
                 </div>
                 <div className="project-brief">
                   <h3>Hastings Mezzanine Fitout</h3>
+                  <div className="accent-rule" aria-hidden="true"></div>
                   <p>A fast-growing distribution hub needed dedicated administrative zones without sacrificing ground-floor picking space. We designed an independent mezzanine level equipped with climate-controlled offices directly overlooking the warehouse.</p>
-                  <a href="#" className="btn btn-secondary project-link" style={{ marginTop: '20px' }}>View Project</a>
+                  <a href="#" className="btn btn-secondary project-link">View Project</a>
                 </div>
               </div>
             </div>
@@ -150,20 +159,19 @@ function App() {
           </div>
         </section>
 
-        {/* Lead Capture Form (CRO Optimized) */}
         <section id="quote" className="lead-capture">
           <div className="container lead-container">
             <div className="lead-content">
               <h2>Ready to Expand Your Workspace?</h2>
+              <div className="lead-rule" aria-hidden="true"></div>
               <p>Discuss your operational bottlenecks with our structural experts. We provide comprehensive site appraisals and tailored boutique industrial designs.</p>
 
-              <div className="badge-banner-projects" style={{ marginTop: '3rem', padding: '1.5rem', backgroundColor: 'rgba(255,255,255,0.02)', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.08)' }}>
+              <div className="badge-banner-projects">
                 <img 
                   src="https://dynamicws.com.au/wp-content/uploads/2021/02/registered-builder-grey.png" 
                   alt="Registered Commercial Building Practitioner" 
-                  style={{ maxWidth: '180px', display: 'block', marginBottom: '1rem' }}
                 />
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.95rem', margin: 0 }}>
+                <p>
                   Dynamic Warehouse Solutions is a certified Commercial Building Practitioner. Every custom mezzanine office we deliver guarantees strict adherence to Australian safety regulations, building codes, and structural integrity standards.
                 </p>
               </div>
@@ -202,7 +210,6 @@ function App() {
         </div>
       </footer>
 
-      {/* Sticky CTA */}
       <div className={`sticky-cta ${showSticky ? 'visible' : ''}`} aria-hidden={!showSticky}>
         <div className="sticky-cta-inner">
           <p className="sticky-warranty">
